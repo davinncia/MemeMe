@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="aVL-9X-Lji">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="Camera" image="camera" catalog="system" id="dRw-rs-f2B"/>
+                                    <barButtonItem title="Album" image="folder" catalog="system" id="mLo-yp-tvz"/>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXK-7H-ZJ6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="MemeMe" id="fbe-eq-SVG">
+                                        <barButtonItem key="leftBarButtonItem" title="Share" image="square.and.arrow.up" catalog="system" id="1fs-cH-Mzb"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="CtZ-30-ad9"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AN0-D1-hjW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fsK-rV-UHY" userLabel="Top Text Field">
+                                <rect key="frame" x="0.0" y="88" width="414" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="209-AS-8o2" userLabel="Bottom Text Field">
+                                <rect key="frame" x="0.0" y="779" width="414" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="209-AS-8o2" firstAttribute="bottom" secondItem="AN0-D1-hjW" secondAttribute="bottom" id="09e-oZ-hfJ"/>
+                            <constraint firstItem="AN0-D1-hjW" firstAttribute="bottom" secondItem="aVL-9X-Lji" secondAttribute="top" id="5zF-SV-47c"/>
+                            <constraint firstItem="oXK-7H-ZJ6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8x5-3u-HXC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aVL-9X-Lji" secondAttribute="bottom" id="9iE-nA-inG"/>
+                            <constraint firstItem="oXK-7H-ZJ6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AAG-4k-Fxq"/>
+                            <constraint firstItem="209-AS-8o2" firstAttribute="leading" secondItem="AN0-D1-hjW" secondAttribute="leading" id="AkO-qq-gPj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oXK-7H-ZJ6" secondAttribute="trailing" id="HZ9-Ua-7rJ"/>
+                            <constraint firstItem="oXK-7H-ZJ6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MgD-wB-rkp"/>
+                            <constraint firstItem="209-AS-8o2" firstAttribute="centerX" secondItem="AN0-D1-hjW" secondAttribute="centerX" id="Mu6-Fd-cIW"/>
+                            <constraint firstItem="209-AS-8o2" firstAttribute="trailing" secondItem="AN0-D1-hjW" secondAttribute="trailing" id="Pyr-Um-vlf"/>
+                            <constraint firstItem="aVL-9X-Lji" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VEQ-gc-HKf"/>
+                            <constraint firstItem="AN0-D1-hjW" firstAttribute="top" secondItem="oXK-7H-ZJ6" secondAttribute="bottom" id="VtF-cz-Ij1"/>
+                            <constraint firstItem="fsK-rV-UHY" firstAttribute="leading" secondItem="AN0-D1-hjW" secondAttribute="leading" id="W6g-oG-2HX"/>
+                            <constraint firstItem="AN0-D1-hjW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XWn-EW-4KL"/>
+                            <constraint firstItem="fsK-rV-UHY" firstAttribute="trailing" secondItem="AN0-D1-hjW" secondAttribute="trailing" id="bFM-d8-o68"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aVL-9X-Lji" secondAttribute="trailing" id="n89-SU-zeT"/>
+                            <constraint firstItem="AN0-D1-hjW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rp0-xJ-h7B"/>
+                            <constraint firstItem="fsK-rV-UHY" firstAttribute="top" secondItem="AN0-D1-hjW" secondAttribute="top" id="sQV-Ky-Zy6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AN0-D1-hjW" secondAttribute="trailing" id="uPY-hO-WGK"/>
+                            <constraint firstItem="aVL-9X-Lji" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wS6-sT-WR7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomTextField" destination="209-AS-8o2" id="mck-TC-NLR"/>
+                        <outlet property="imageView" destination="AN0-D1-hjW" id="Gpe-9N-Vpw"/>
+                        <outlet property="topTextField" destination="fsK-rV-UHY" id="X5n-sG-v6G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="folder" catalog="system" width="128" height="97"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
